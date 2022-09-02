@@ -10,48 +10,85 @@
     </head>
 
     <body>
+        <button onclick="navCatagories()">news</button>
 
-        <header>
-            <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
-                <div class="container px-6 py-4 mx-auto">
-                    <div class="lg:flex lg:items-center lg:justify-between mb-8 px-12">
+        <section class="container mx-auto">
+            <div id="navigation_bar" class="flex items-center justify-between">
+                <button
+                    class="font-semibold text-lg my-8 hover:text-white hover:rounded hover:bg-blue-600 px-1">Home</button>
+
+            </div>
+
+        </section>
+
+        <section class="bg-white dark:bg-gray-900">
+            <div class="container px-6 py-4 mx-auto">
+                <div class="mt-8 lg:-mx-6 lg:flex">
+                    <img class="object-cover w-40 lg:mx-6 lg:w-60 rounded-xl h-40 lg:h-72"
+                        src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="">
+
+                    <div class="m-6 lg:w-1/2 lg:mt-0 lg:mx-4">
+
+                        <h1 class="block text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl pt-8">
+                            All the features you want to know
+                        </h1>
+
+                        <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint autem nesciunt,
+                            laudantium quia tempore delect
+                        </p>
+                        <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint autem nesciunt,
+                            laudantium quia tempore delect
+                        </p>
+
                         <div class="flex items-center justify-between">
-                            <div class="text-xl font-semibold text-gray-700">
-                                <button
-                                    class="text-2xl font-bold text-violet-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                                    href="#"><span class="bg-violet-700 text-white rounded-lg px-1 py-0">Fresh</span>
-                                    News</button>
+                            <div class="flex items-center mt-6">
+                                <img class="object-cover object-center w-10 h-10 rounded-full"
+                                    src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                                    alt="">
+
+                                <div class="mx-4">
+                                    <h1 class="text-sm text-gray-700 dark:text-gray-200">Amelia. Anderson</h1>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Lead Developer</p>
+                                </div>
                             </div>
+                            <div class="flex mt-2 items-center">
+                                <img class="w-5 h-5 text-gray-700 fill-current dark:text-gray-300"
+                                    src="images/carbon_view.svg" alt="">
+                                <h2>1.5M</h2>
+                            </div>
+
+                            <div class="flex mt-2 items-center">
+                                <img class="w-5 h-5 text-gray-700 fill-current dark:text-gray-300"
+                                    src="images/bxs_star-half.svg" viewBox="0 0 24 24" alt="">
+
+                                <img class="w-5 h-5 text-gray-700 fill-current dark:text-gray-300"
+                                    src="images/unshadow_star.svg" viewBox="0 0 24 24" alt="">
+
+                                <img class="w-5 h-5 text-gray-700 fill-current dark:text-gray-300"
+                                    src="images/unshadow_star.svg" viewBox="0 0 24 24" alt="">
+
+                                <img class="w-5 h-5 text-gray-700 fill-current dark:text-gray-300"
+                                    src="images/unshadow_star.svg" viewBox="0 0 24 24" alt="">
+
+                                <img class="w-5 h-5 text-gray-700 fill-current dark:text-gray-300"
+                                    src="images/unshadow_star.svg" viewBox="0 0 24 24" alt="">
+
+
+                            </div>
+                            <div class="flex mt-2 items-center">
+                                <img src="images/arrow.svg" alt="">
+                            </div>
+
                         </div>
 
-                        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                        <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-                            class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300  ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
-                            <div class="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                                <a href="#"
-                                    class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">News</a>
-                                <a href="#"
-                                    class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Blogs</a>
 
-
-                            </div>
-
-                            <div class="flex items-center mt-4 lg:mt-0">
-                                <button type="button" class="flex items-center focus:outline-none"
-                                    aria-label="toggle profile dropdown">
-                                    <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                                        <img src="images/Avatar.svg" class="object-cover w-full h-full" alt="avatar">
-                                    </div>
-
-                                    <h3 class="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">News Edittor</h3>
-                                </button>
-                            </div>
-                        </div>
                     </div>
-                    <hr>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </section>
 
 
         <script src="js/newsFetching.js"></script>
