@@ -15,7 +15,7 @@ const displayNavCatagories = (dataArray) => {
         const { category_name } = differentNews;
         const containerDiv = document.createElement('div');
         containerDiv.innerHTML = ` 
-        <button  class="font-semibold text-lg mt-6 hover:text-white hover:rounded hover:bg-blue-600 px-1">${category_name}</button>
+        <button  class="font-semibold text-lg mt-6 md:flex md:flex-wrap md:justify-end md:items-end sm:flex sm:flex-wrap  sm:items-end sm:justify-end  hover:text-white hover:rounded hover:bg-blue-600 px-1">${category_name}</button>
         `;
         container.appendChild(containerDiv);
     });
