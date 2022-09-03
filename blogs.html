@@ -5,12 +5,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fresh News</title>
+        <title>Blogs</title>
         <link rel="stylesheet" href="CSS/style.css">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="flex flex-col min-h-screen">
+    <body>
+
         <header>
             <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
                 <div class="container px-6 py-4 mx-auto">
@@ -28,7 +29,8 @@
                         <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
                             class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300  ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
                             <div class="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                                <a class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                <a href="index.html"
+                                    class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                                     onclick="navCatagories(this)">News</a>
                                 <a href="blogs.html"
                                     class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Blogs</a>
@@ -62,15 +64,95 @@
             </nav>
         </header>
 
-
-
-
         <main>
-            <!-- <button onclick="cardNews('01')">find</button> -->
-            <section class="container px-6 py-4 mx-auto">
-                <div id="news_cards">
+            <section class="w-9/12 mx-auto m-5 p-8 bg-gray-700">
+                <table class="text-xl border-2">
+                    <thead>
+                        <caption class="text-3xl font-bold text-amber-500">Differences among var, let, and const
+                        </caption>
+                    </thead>
+                    <tbody>
+                        <tr class="p-4 g-4 border-2">
+                            <th class="border-2 p-4">let</th>
+                            <th class="border-2 p-4">var</th>
+                            <th class="border-2 p-4">const</th>
+                        </tr>
+                        <tr class="p-4 g-4 border-2">
+                            <td class="border-2 p-4">The scope of a var variable is functional scope.</td>
+                            <td class="border-2 p-4">The scope of a let variable is block scope.</td>
+                            <td class="border-2 p-4">The scope of a const variable is block scope.</td>
+                        </tr>
+                        <tr class="p-4 g-4 border-2">
+                            <td class="border-2 p-4">The scope of a const variable is block scope.</td>
+                            <td class="border-2 p-4">It can be updated but cannot be re-declared into the scope.</td>
+                            <td class="border-2 p-4">It cannot be updated or re-declared into the scope.</td>
+                        </tr>
+                        <tr class="p-4 g-4 border-2">
+                            <td class="border-2 p-4">It can be declared without initialization.</td>
+                            <td class="border-2 p-4">It can be declared without initialization.</td>
+                            <td class="border-2 p-4">It cannot be declared without initialization.</td>
+                        </tr>
+                        <tr class="p-4 g-4 border-2">
+                            <td class="border-2 p-4">It can be accessed without initialization as its default value is
+                                "undefined"</td>
+                            <td class="border-2 p-4">It cannot be accessed without initialization otherwise it will give
+                                'referenceError'.</td>
+                            <td class="border-2 p-4">It cannot be accessed without initialization, as it cannot be
+                                declared
+                                without
+                                initialization.
+                            </td>
+                        </tr>
+                        <tr class="p-4 g-4 border-2">
+                            <td class="border-2 p-4">hoisting done , with initializing as 'default' value</td>
+                            <td class="border-2 p-4">Hoisting is done , but not initialized (this is the reason for
+                                error
+                                when
+                                we access the let
+                                variable
+                                before declaration/initialization</td>
+                            <td class="border-2 p-4">Hoisting is done, but not initialized (this is the reason for error
+                                when we
+                                access the const
+                                variable before declaration/initialization</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="w-9/12 mx-auto m-5 p-8 bg-gray-700 mt-4">
+                <div class="p-5">
+                    <h1 class="text-3xl font-bold text-amber-500">Differences between regular function and arrow
+                        function
+                    </h1>
+                    <div>
+                        <h1 class="font-bold text-2xl">Regular function:</h1>
+                        <p>Regular functions created using function declarations or expressions are 'constructible' and
+                            'callable'. Since regular functions are constructible, they can be called using the 'new'
+                            keyword. However, the arrow functions are only 'callable' and not constructible. Thus, we
+                            will
+                            get a run-time error on trying to construct a non-constructible arrow functions using the
+                            new
+                            keyword.</p>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-2xl">Arrow function:</h1>
+                        <p>Arrow functions 'a new feature introduced in ES6' enable writing concise functions in
+                            JavaScript. While both regular and arrow functions work in a similar manner, yet there are
+                            certain interesting differences between them, as discussed below.</p>
+                    </div>
+                </div>
+            </section>
 
-
+            <section class="w-9/12 mx-auto m-5 p-8 bg-gray-700 mt-4">
+                <div class="p-5">
+                    <h1 class="font-bold text-3xl text-amber-500">Why we use Template Strings in JavaScript?</h1>
+                    <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                        insert/interpolate variables and expressions into strings without needing to concatenate like in
+                        older versions of JavaScript. It allows us to create strings that are complex and contain
+                        dynamic
+                        elements. Another great thing that comes with template strings are tags. Tags are functions that
+                        take a string and the decomposed parts of the string as parameters and are great for converting
+                        strings to different entities.</p>
                 </div>
             </section>
         </main>
@@ -110,8 +192,7 @@
                 </a>
             </div>
         </footer>
-        <script src="js/newsCard.js"></script>
-        <script src="js/newsFetching.js"></script>
+
     </body>
 
 </html>
