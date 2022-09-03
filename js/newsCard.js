@@ -25,7 +25,7 @@ const display = (data) => {
         newsCardDiv.classList.add('bg-gray-100')
         newsCardDiv.innerHTML = `
         <div class="mt-8 lg:-mx-6 lg:flex">
-        <img class="object-cover w-40 md:w-full sm:w-full lg:mx-6 lg:w-60 rounded-xl h-40 lg:h-80"
+        <img class="object-cover w-40 md:w-full sm:w-full sm:h-1/4 md:h-1/4	 lg:mx-6 lg:w-60 rounded-xl h-40 lg:h-80"
             src="${thumbnail_url}"
             alt="">
 
